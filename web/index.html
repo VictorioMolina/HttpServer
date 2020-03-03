@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Servicios Telemáticos</title>
+    <style>
+        ::selection {
+            background-color: rgba(190, 0, 0, .7);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            -webkit-box-shadow: inset 0 0 6px black;
+            box-shadow: inset 0 0 6px black;
+            border-radius: 10px;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            padding-top: 10px;
+            background-image: url(index_files/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+        }
+
+        header>div {
+            width: 70%;
+            text-align: center;
+        }
+
+        header>div>h1 {
+            font-weight: 100;
+            font-family: 'Lato';
+        }
+
+        @media screen and (min-width: 601px) {
+            header>div>h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            header>div>h1 {
+                font-size: 30px;
+            }
+        }
+
+        header>div#image {
+            width: 30%;
+            padding: 10px;
+        }
+
+        header>div#image {
+            width: auto;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            padding: 20px 20px 20px 30px;
+        }
+
+        label {
+            font-family: 'Lato';
+        }
+
+        input[type=submit] {
+            background-color: rgb(190, 0, 0);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(170, 0, 0);
+        }
+
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="max-width: 800px; margin: auto;">
+        <div>
+            <h1>Entrada por correo</h1>
+        </div>
+        <div id="image">
+            <img style="margin-left: 10px; " src="index_files/logo-um.jpg" />
+        </div>
+    </header>
+
+    <div style="background-color: rgba(0,0,0,.1); margin-top: 10px; padding: 100px 0px 100px 0px;">
+        <div style="max-width: 700px; margin: auto;">
+            <div class="container">
+                <form method="POST" action="/accion_form.html">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="usuario@um.es"
+                        oninput="changeColor(this.id, 'rgba(0, 0, 0, .5)')" onfocusout="changeColor(this.id, 'rgb(0, 0, 0)')"
+                        required />
+
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="********"
+                        oninput="changeColor(this.id, 'rgba(0, 0, 0, .5)')" onfocusout="changeColor(this.id, 'rgb(0, 0, 0)')"
+                        required>
+
+                    <input type="submit" value="Entrar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <video style="width: 100%;" controls loop autoplay muted>
+        <source src="index_files/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Script Change Input Color-->
+    <script>
+        function changeColor(id, color) {
+            document.getElementById(id).style.color = color
+        }
+    </script>
+</body>
+
+</html>
