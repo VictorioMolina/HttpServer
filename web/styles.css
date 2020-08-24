@@ -83,7 +83,7 @@ body {
   font-family: "Ubuntu";
 }
 
-div {
+div { 
   width: 50%;
   display: flex;
   flex-direction: column;
